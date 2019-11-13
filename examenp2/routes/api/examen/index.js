@@ -84,6 +84,26 @@ function initMangaApi(db)
             }
           );
 
+          router.get(
+            '/delete/:manid',
+            function( req, res) {
+        
+              var id = req.params.manid || '';
+              if(id===' ')
+              {
+                return  res.status(404).json({"error": "Identificador no válido"});
+              }
+              exaModel.SeeMangas(id, (err, rslt)=>{
+                if(err)
+                {
+                  return res.status(500).json({"error":"Ocurrió un error, intente de nuevo."});
+                }
+                res.status(200).json(mangas);
+                }
+              );
+            }  
+            );
+
 
     return router;
 }

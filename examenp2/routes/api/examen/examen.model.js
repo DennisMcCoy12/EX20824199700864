@@ -81,6 +81,19 @@ function mangasModel(db)
       })
     }
 
+    mangaModel.SeeMangas = (handler)=>
+    {
+        var query = {"_id": new ObjectId(id)};
+        mangasCollection.findOne(query, (err, rslt)=>{
+            if(err)
+            {
+              console.log(err);
+              return handler(err, null);
+            }
+            return handler(null, rslt);
+        })
+    }
+
     return mangaModel;
 }
 module.exports = mangasModel;
