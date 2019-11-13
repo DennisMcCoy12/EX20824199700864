@@ -51,10 +51,6 @@ function initMangaApi(db)
         {
         var manIdToModify = req.params.manid;
         var estadoAct= req.body.estado;
-        if(estadoAct!=="Ongoing" || estadoAct!=="Completed" || 
-        estadoAct!=="Hiatsu" || estadoAct!=="Dicontinued"){
-            estadoAct="Undefined";
-        }
         exaModel.updateManga(
             {estado:estadoAct}, manIdToModify,
             (err, rsult)=>{
@@ -67,6 +63,26 @@ function initMangaApi(db)
             );
         }
         );
+
+        router.delete(
+            '/delete/:manid',
+            function( req, res) {
+        
+              var id = req.params.manid || '';
+              if(id===' ')
+              {
+                return  res.status(404).json({"error": "Identificador no válido"});
+              }
+              exaModel.deleteMangas(id, (err, rslt)=>{
+                if(err)
+                {
+                  return res.status(500).json({"error":"Ocurrió un error, intente de nuevo."});
+                }
+                return res.status(200).json({"msg":"Deleted ok"});
+                
+              });
+            }
+          );
 
 
     return router;
