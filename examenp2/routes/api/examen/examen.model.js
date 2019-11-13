@@ -47,6 +47,27 @@ function mangasModel(db)
         });
     }
 
+    mangaModel.updateManga = (updateFields, mangaId, handler)=>{
+        let mangaFilter = {"_id": new ObjectId(mangaId)};
+        let updateObject = {
+          "$set": {
+                    "estado": updateFields.estado,
+                    "dateModified":new Date().getTime()
+                }
+    };
+    mangasCollection.updateOne(
+        mangaFilter,
+        updateObject,
+        (err, rslt)=>{
+          if(err){
+            console.log(err);
+            return handler(err, null);
+          }
+          return handler(null, rslt);
+        }
+      );
+    };
+
     return mangaModel;
 }
 module.exports = mangasModel;
