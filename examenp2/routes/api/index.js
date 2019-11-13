@@ -24,13 +24,16 @@ passport.use(
 
 //Rutas de Cada Entidad
 var securityApiRoutes = require('./security/index')(db);
+var examenesApiRoutes = require('./examen/index')(db);
 
 //localhost:3000/api/sec/
 router.use('/sec', securityApiRoutes);
 
 
 //localhost:3000/api/exa
-
+router.use('/exa',
+passport.authenticate('jwt', {session:false}),
+examenesApiRoutes);
 
 return router;
 }// end initApiRouter;
