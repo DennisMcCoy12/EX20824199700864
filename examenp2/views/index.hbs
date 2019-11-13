@@ -1,0 +1,45 @@
+<h1>{{title}}</h1>
+<h2>Instrucciones</h2>
+<p>Elabore una entrada api <b>exa</b> y todos sus componentes (rutas y modelo de datos)
+  que permitan los siguiente:
+  <ol>
+    <li>Obtener todos los documentos guardados de la colección <b>Manga</b></li>
+    <li>Agregar un nuevo documento con la siguiente estructura
+<pre>
+  {
+    "Nombre":"",
+    "Autor":"",
+    "PaisOrigen":"",
+    "NumeroTomos": 0,
+    "Estado": [Ongoing | Completed | Hiatsu |Dicontinued],
+    "KeyWords": [Arreglo de palabras],
+    "Categorias":[Arreglo de categorías]
+  }
+</pre>
+    Para KeyWords y Categorias, puede usar el metodo split
+    </li>
+    <li>
+      Modificar el Estado
+    </li>
+    <li>
+      Borrar un Manga
+    </li>
+    <li>
+      Obtener un manga por id
+    </li>
+  </ol>
+</p>
+<p>
+  Entregar en Moodle un archivo compreso <b>SIN LA CARPETA node_modules</b>
+  con la exportación de la colección en postman donde pruebe todas las entradas.
+  En el campo de texto agregue la url del repositorio de su examen en github donde
+  se espera encontrar al menos 5 commits:
+  <ol>
+    <li>Al crear la ruta para agregar uno y obtener todos</li>
+    <li>Al crear la ruta para modificar</li>
+    <li>Al crear la ruta para eliminar</li>
+    <li>Al crear la ruta para obtener uno por id</li>
+  </ol>
+  Se restarán automaticamente 40 pts si no existe el repositorio ni los commits.
+</p>
+<h3>Exitos</h3>
