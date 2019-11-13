@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "ffeb0539-6e6f-4e1d-8ee1-dd81199fa448",
+		"name": "EX20824199700864",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "demimcdu@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Eucal!pto12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sec/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sec",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "demimcdu@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "pswd",
+							"value": "Eucal!pto12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sec/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sec",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGNiNTNiYmE5YjU3NjIyNmM4ZDBkODAiLCJlbWFpbCI6ImRlbWltY2R1QGhvdG1haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3MzYwOTM4NSwiZXhwIjoxNTczNjEwNTg1fQ.iWuNDjZSViKSm-X1dI1LmJtWAdTuCdkFcR_u0vZERbk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/exa/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exa",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGNiNTNiYmE5YjU3NjIyNmM4ZDBkODAiLCJlbWFpbCI6ImRlbWltY2R1QGhvdG1haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3MzYwOTM4NSwiZXhwIjoxNTczNjEwNTg1fQ.iWuNDjZSViKSm-X1dI1LmJtWAdTuCdkFcR_u0vZERbk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "codigo",
+							"value": "0002",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "JOKER",
+							"type": "text"
+						},
+						{
+							"key": "paisOrigen",
+							"value": "USA",
+							"type": "text"
+						},
+						{
+							"key": "numTomos",
+							"value": "1003",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "Completed",
+							"type": "text"
+						},
+						{
+							"key": "keywords",
+							"value": "emm bueno",
+							"type": "text"
+						},
+						{
+							"key": "categorias",
+							"value": "accion violencia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/exa/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exa",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGNiNTNiYmE5YjU3NjIyNmM4ZDBkODAiLCJlbWFpbCI6ImRlbWltY2R1QGhvdG1haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3MzYwOTM4NSwiZXhwIjoxNTczNjEwNTg1fQ.iWuNDjZSViKSm-X1dI1LmJtWAdTuCdkFcR_u0vZERbk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "estado",
+							"value": "Dicontinued",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/exa/update/:manid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exa",
+						"update",
+						":manid"
+					],
+					"variable": [
+						{
+							"key": "manid",
+							"value": "5dcb5fcf28624a1ff01f19d6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGNiNTNiYmE5YjU3NjIyNmM4ZDBkODAiLCJlbWFpbCI6ImRlbWltY2R1QGhvdG1haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3MzYwOTM4NSwiZXhwIjoxNTczNjEwNTg1fQ.iWuNDjZSViKSm-X1dI1LmJtWAdTuCdkFcR_u0vZERbk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/exa/delete/:manid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exa",
+						"delete",
+						":manid"
+					],
+					"variable": [
+						{
+							"key": "manid",
+							"value": "5dcb5a0e8fe1511408f722c5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOne",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGNiNTNiYmE5YjU3NjIyNmM4ZDBkODAiLCJlbWFpbCI6ImRlbWltY2R1QGhvdG1haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3MzYwOTM4NSwiZXhwIjoxNTczNjEwNTg1fQ.iWuNDjZSViKSm-X1dI1LmJtWAdTuCdkFcR_u0vZERbk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/exa/view/:manid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exa",
+						"view",
+						":manid"
+					],
+					"variable": [
+						{
+							"key": "manid",
+							"value": "5dcb5fcf28624a1ff01f19d6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
